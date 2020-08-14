@@ -1,0 +1,19 @@
+models:
+  Admin:
+    username: string
+    name: string
+    password: string
+    email: string
+    phone: string nullable
+    avatar: string nullable
+    status: tinyinteger
+    last_login: timestamp
+    softDeletes
+    relationships:
+      belongsToMany: Branch
+
+controllers:
+  Admin:
+    resource
+
+seeders: Admin
