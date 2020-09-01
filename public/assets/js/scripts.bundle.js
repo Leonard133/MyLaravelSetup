@@ -9153,7 +9153,7 @@ KTUtil.ready(function() {
     KTLayoutQuickCartPanel.init('kt_quick_cart');
 
     // Init Search For Quick Search Dropdown
-    KTLayoutSearch().init('kt_quick_search_dropdown');
+    // KTLayoutSearch().init('kt_quick_search_dropdown');
 
     // Init Search For Quick Search Offcanvas Panel
     KTLayoutSearchOffcanvas().init('kt_quick_search_offcanvas');
