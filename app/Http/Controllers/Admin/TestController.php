@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\DataTables\TestsDataTable;
 use App\Http\Controllers\Controller;
+use App\Test;
 use Illuminate\Http\Request;
 
 class TestController extends Controller
@@ -12,10 +14,10 @@ class TestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(TestsDataTable $dataTable)
     {
         //
-        return view('admin.test.index');
+        return $dataTable->render('admin.test.index');
     }
 
     /**
@@ -46,9 +48,10 @@ class TestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Test $test)
     {
         //
+        return view('admin.test.show',compact('test'));
     }
 
     /**

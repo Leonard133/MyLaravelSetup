@@ -40,6 +40,7 @@
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{ asset("assets/media/logos/favicon.ico") }}" />
 
+    @stack('styles')
 </head>
 <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
     <!--begin::Main-->
@@ -85,7 +86,7 @@
             <!--begin::Header-->
             <div class="d-flex align-items-center mt-5">
                 <div class="symbol symbol-100 mr-5">
-                    <div class="symbol-label" style="background-image:url('assets/media/users/300_21.jpg')"></div>
+                    <div class="symbol-label" style="background-image:url('{{ asset("assets/media/users/300_21.jpg") }}')"></div>
                     <i class="symbol-badge bg-success"></i>
                 </div>
                 <div class="d-flex flex-column">
@@ -352,6 +353,7 @@
     <script src="{{ asset("assets/plugins/global/plugins.bundle.js?v=7.0.5") }}"></script>
     <script src="{{ asset("assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5") }}"></script>
     <script src="{{ asset("assets/js/scripts.bundle.js?v=7.0.5") }}"></script>
+    <script src="{{ asset('assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.6') }}"></script>
     <!--end::Global Theme Bundle-->
     <!--begin::Page Vendors(used by this page)-->
     <script src="{{ asset("assets/plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5") }}"></script>
@@ -359,5 +361,7 @@
     <!--begin::Page Scripts(used by this page)-->
     <script src="{{ asset("assets/js/pages/widgets.js?v=7.0.5") }}"></script>
     <!--end::Page Scripts-->
+    @stack('scripts')
+    @include('admin.layouts.sweetalert')
 </body>
 </html>
